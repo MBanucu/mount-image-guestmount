@@ -10,6 +10,10 @@ Disk image mounting via guestmount / libguestfs (Linux).
 [![CI](https://img.shields.io/github/actions/workflow/status/MBanucu/mount-image-guestmount/test.yml?branch=main)](https://github.com/MBanucu/mount-image-guestmount/actions/workflows/test.yml)
 [![codecov](https://codecov.io/gh/MBanucu/mount-image-guestmount/branch/main/graph/badge.svg)](https://codecov.io/gh/MBanucu/mount-image-guestmount)
 
+[![Downloads total](https://pepy.tech/badge/mount-image-guestmount)](https://pepy.tech/project/mount-image-guestmount)
+[![Downloads/month](https://pepy.tech/badge/mount-image-guestmount/month)](https://pepy.tech/project/mount-image-guestmount)
+[![Downloads/week](https://pepy.tech/badge/mount-image-guestmount/week)](https://pepy.tech/project/mount-image-guestmount)
+
 ## Quick start
 
 ```python
