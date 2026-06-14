@@ -56,3 +56,13 @@ def detach_image(device: str):
     """Detach a block device via sudo losetup."""
     from mount_image_sudo import detach_image as _sudo_detach
     _sudo_detach(device)
+
+
+def umount_inner(mount_point: str):
+    """Unmount FUSE without cleanup. Used by the orchestrator."""
+    subprocess.run(['fusermount', '-u', mount_point], capture_output=True)
+
+
+def detach_inner(device: str):
+    """No-op. Guestmount uses FUSE, no loop device to detach."""
+    pass
