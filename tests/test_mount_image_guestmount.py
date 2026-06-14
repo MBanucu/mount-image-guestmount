@@ -41,7 +41,7 @@ class TestGuestmountMount(unittest.TestCase):
         from mount_image_guestmount import umount_image
         umount_image('/tmp/mp')
 
-    @patch('mount_image_guestmount.mount_image_sudo.attach_image')
+    @patch('mount_image_sudo.attach_image')
     def test_attach_image_delegates(self, mock_sudo_attach):
         mock_sudo_attach.return_value = '/dev/loop0'
         from mount_image_guestmount import attach_image
@@ -49,7 +49,7 @@ class TestGuestmountMount(unittest.TestCase):
         self.assertEqual(dev, '/dev/loop0')
         mock_sudo_attach.assert_called_once_with('/tmp/test.img')
 
-    @patch('mount_image_guestmount.mount_image_sudo.detach_image')
+    @patch('mount_image_sudo.detach_image')
     def test_detach_image_delegates(self, mock_sudo_detach):
         from mount_image_guestmount import detach_image
         detach_image('/dev/loop0')
